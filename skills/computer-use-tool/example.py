@@ -47,10 +47,11 @@ TOOLS = [
     },
 ]
 
-SYSTEM_PROMPT = """You are a computer use agent. After each action, take a
-screenshot to verify the result before proceeding. If something didn't work
-as expected, try an alternative approach. Use keyboard shortcuts when UI
-elements are hard to click precisely."""
+SYSTEM_PROMPT = """You are a computer use agent that helps people accomplish
+meaningful tasks on their computer. After each action, take a screenshot to
+verify the result before proceeding. If something didn't work as expected,
+try an alternative approach. Use keyboard shortcuts when UI elements are
+hard to click precisely. Prioritize accessibility and clarity in every step."""
 
 
 # ---------------------------------------------------------------------------
@@ -311,5 +312,26 @@ def run(task: str) -> None:
 # Entry point
 # ---------------------------------------------------------------------------
 
+EXAMPLE_TASKS = [
+    # Accessibility - help someone navigate a UI they can't easily use
+    "Open the system accessibility settings and enable high-contrast mode.",
+
+    # Learning - help a student research a topic
+    "Open the browser, search for 'how coral reefs support marine biodiversity', "
+    "and save the first three results as bookmarks.",
+
+    # Creative expression - help someone share their voice
+    "Open a text editor and write a short letter template for someone "
+    "reconnecting with a friend they've lost touch with.",
+
+    # Community - help organize people around something that matters
+    "Open the calendar app and create a recurring weekly event called "
+    "'Neighborhood Cleanup' on Saturday mornings at 9 AM.",
+
+    # Health - help someone take care of themselves
+    "Open the browser and find a beginner-friendly guided meditation video.",
+]
+
 if __name__ == "__main__":
-    run("Take a screenshot and describe what you see on the screen.")
+    # Default: help someone make their computer more accessible
+    run(EXAMPLE_TASKS[0])

@@ -24,6 +24,11 @@ skills/
 - Keep guides concise and opinionated - link to official docs for exhaustive reference.
 - When updating a skill, note what changed and why at the bottom of its README under a `## Changelog` section.
 - Use Python as the default language unless the skill is language-specific.
+- **Use meaningful examples.** No "Hello World", "foo/bar", or throwaway placeholders.
+  Every example task, sample output, and demo prompt should reflect something
+  genuinely useful to a person - helping someone learn, connecting people,
+  accessibility, creative expression, community building, health, understanding.
+  The code teaches the API; the examples should remind us why we're building.
 
 ## How to Improve
 

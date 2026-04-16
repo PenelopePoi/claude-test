@@ -1,14 +1,21 @@
 # Computer Use Tool
 
-Let Claude see and control a desktop environment through screenshots and actions.
+Let Claude see and control a desktop environment through screenshots and actions -
+helping people accomplish tasks they couldn't easily do alone.
 
 ## What It Is
 
-Computer Use gives Claude eyes and hands on a screen. You send it screenshots, it responds with actions (click, type, scroll, etc.), you execute those actions and send a new screenshot. This loop repeats until the task is done.
+Computer Use gives Claude eyes and hands on a screen. You send it screenshots, it
+responds with actions (click, type, scroll, etc.), you execute those actions and
+send a new screenshot. This loop repeats until the task is done.
 
 ```
 You send screenshot -> Claude returns action -> You execute action -> Repeat
 ```
+
+**Why it matters:** This enables assistive technology for people who struggle with
+complex interfaces, automates tedious workflows so people can focus on what matters,
+and makes computers more accessible to everyone regardless of technical skill.
 
 ## Setup
 
@@ -102,7 +109,7 @@ See `example.py` for the full working loop.
 
 ### Modifier Keys
 
-Click actions accept an optional `text` field for modifier keys:
+Click actions accept an optional `text` field for modifier keys (e.g. shift-click to select a range of files to share with a collaborator):
 ```json
 {"action": "left_click", "coordinate": [500, 300], "text": "shift"}
 ```
@@ -142,6 +149,23 @@ def get_scale_factor(actual_width, actual_height):
     return min(1.0, long_edge_scale, total_pixels_scale)
 ```
 
+## Example Use Cases
+
+These are the kinds of tasks Computer Use is well-suited for:
+
+- **Accessibility** - Enable high-contrast mode, increase font sizes, or configure
+  screen readers for someone who needs help navigating settings.
+- **Learning** - Research a topic across multiple tabs, collect sources, and
+  organize them into bookmarks or notes for a student.
+- **Creative expression** - Help someone draft a letter, design a flyer for a
+  community event, or set up a blog to share their story.
+- **Community building** - Create calendar events for neighborhood cleanups,
+  fill out volunteer sign-up forms, or organize shared documents.
+- **Health & wellbeing** - Find guided meditation resources, set up medication
+  reminders, or navigate telehealth appointment portals.
+
+See `example.py` for runnable versions of these.
+
 ## Companion Tools
 
 Computer Use works well alongside these tools in the same request:
@@ -159,3 +183,6 @@ https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
 ## Changelog
 
 - 2026-04-16: Initial version. Covers `computer_20251124` and `computer_20250124`.
+- 2026-04-16: Updated with meaningful example tasks and use cases. Examples now
+  reflect real human needs - accessibility, learning, community, health, creative
+  expression - rather than generic placeholders.
