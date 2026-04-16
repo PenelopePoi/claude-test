@@ -7,6 +7,9 @@ A living, self-improving knowledge base of reusable skills for building with the
 | Skill | Description |
 |---|---|
 | [computer-use-tool](skills/computer-use-tool/) | Let Claude see and control a desktop via screenshots and actions |
+| [tool-use](skills/tool-use/) | Give Claude the ability to call functions in your application |
+| [multi-agent-orchestration](skills/multi-agent-orchestration/) | Coordinate multiple Claude instances to tackle complex problems |
+| [mcp-servers](skills/mcp-servers/) | Build servers that extend what Claude can do via Model Context Protocol |
 
 ## Contributing a New Skill
 
